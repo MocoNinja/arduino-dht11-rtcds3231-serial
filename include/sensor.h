@@ -1,4 +1,5 @@
 #include <SimpleDHT.h>
+
 struct Measurement
 {
     byte        Temperature_Celsius;
