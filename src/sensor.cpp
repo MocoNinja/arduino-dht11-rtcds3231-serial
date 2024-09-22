@@ -38,7 +38,7 @@ char* parse_measurement(Measurement *measurement)
     const char *status_friendly_display = (measurement->Status)
         ? "OK"
         : "KO";
-    sprintf(msg, "|Status:%s|Temperature_Celsius:%d|Humidity_Percent:%d|Unix_Local_Timestamp: %lu|",
+    sprintf(msg, "{\"Status\":\"%s\",\"Temperature_Celsius\":%d,\"Humidity_Percent\":%d,\"Unix_Local_Timestamp\":%lu}",
         status_friendly_display, measurement->Temperature_Celsius, measurement->Humidity_Percentage, measurement->Unix_Timestamp_Local); 
     return msg;
 }

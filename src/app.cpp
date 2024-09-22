@@ -23,7 +23,7 @@ void loop() {
   delay(1000);
   Measurement measurement = read_sensor();
   char* parsed_msg = parse_measurement(&measurement);
-  Serial.println(parsed_msg);
+  Serial.print(parsed_msg);
 }
 
 
